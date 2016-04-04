@@ -154,7 +154,7 @@ public final class Agrume: UIViewController {
   private var initialOrientation: UIDeviceOrientation!
 
   public func showFrom(viewController: UIViewController) {
-      backgroundSnapshot = UIApplication.sharedApplication().delegate?.window??.rootViewController?.view.snapshot()
+      backgroundSnapshot = viewController.view.snapshot()
 
       view.userInteractionEnabled = false
       initialOrientation = UIDeviceOrientation(rawValue: UIApplication.sharedApplication().statusBarOrientation.rawValue)
